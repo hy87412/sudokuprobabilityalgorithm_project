@@ -1,16 +1,24 @@
-# 샘플 Python 스크립트입니다.
 
-# Shift+F10을(를) 눌러 실행하거나 내 코드로 바꿉니다.
-# 클래스, 파일, 도구 창, 액션 및 설정을 어디서나 검색하려면 Shift 두 번을(를) 누릅니다.
+#스도쿠 맵 받아오기
+# sudokuboard = []
+# for i in range(9):
+#     sudokuboard.append(list(input()))
 
+#스도쿠 맵 프리셋
+sudokuboard = [[5,6,'','','',7,'','',''],
+                ['',9,'',6,8,3,'','',4],
+                ['',4,'','',1,5,'',8,7],
+                [6,'','','','',2,'',7,9],
+                ['',3,'','','','',1,'',2],
+                ['','','',7,6,4,'',3,''],
+                [9,2,'',8,'',1,'','',''],
+                [4,'',3,2,5,6,'','',1],
+                [8,'','','',4,9,'',2,'']]
 
-def print_hi(name):
-    # 스크립트를 디버그하려면 하단 코드 줄의 중단점을 사용합니다.
-    print(f'Hi, {name}')  # 중단점을 전환하려면 Ctrl+F8을(를) 누릅니다.
+#비공간 좌표 수집
+emptypos = []
+for row in range(9):
+    for col in range(9):
+        if sudokuboard[row][col] == '':
+            emptypos.append([row,col])
 
-
-# 스크립트를 실행하려면 여백의 녹색 버튼을 누릅니다.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# https://www.jetbrains.com/help/pycharm/에서 PyCharm 도움말 참조
